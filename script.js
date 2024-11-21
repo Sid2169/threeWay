@@ -16,3 +16,24 @@ function gethumanChoice() {
     }
     return choice;
 }
+// Logic for one round of play and declare result
+function playRound(computer, human) {
+    
+    computer.toLowerCase();
+    human.toLowerCase();
+    if (computer !== 'rock' && playe1 !== 'paper' && computer !== 'scissor'
+    && human !== 'rock' && playe2 !== 'paper' && human !== 'scissor') {
+        console.log('Invalid choice by player/players');
+        return 'end'
+    }
+
+    if (computer === human) return 'draw';
+    
+    else if ((computer === 'rock' && human === 'scissor') ||
+             (computer === 'paper' && human === 'rock') ||
+             (computer === 'scissor' && human === 'paper')) {
+        return 'computer';
+    } 
+
+    else return 'human';
+}    
