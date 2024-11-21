@@ -37,3 +37,36 @@ function playRound(computer, human) {
 
     else return 'human';
 }    
+// Logic for multiple rounds of play, number of rounds provided by the user
+function playGame() {
+    let rounds = Number(prompt("How many rounds you want to play?"));
+    if (isNaN(rounds) || !isInteger(rounds)) {
+        console.log('Please provide a valid number of rounds which is possitive integer.\n Start the game again')
+    }
+
+    let computerScore = 0;
+    let humanScore = 0;
+    let roundCounter = 0;
+    while (roundCounter > rounds)
+    {
+        let computer = computerChoice();
+        let human = gethumanChoice();
+        result = playRound(computer, human)
+        if (result === 'end') {
+            break;
+        }
+        if(result === 'computer') {
+            computerScore++;
+            console.log('You lose this round! Compuer gains 1 point\n')
+        }
+        if (result === 'human') {
+            humanScore++;
+            console.log('You Win this round! You gain 1 point\n')
+        }
+    }
+    console.log('Score Board :-\n Computer: ' + computerScore + ' ' + 'You: ' + humanScore + '\n');
+    if (computerScore === humanScore) console.log('The game was a draw');
+    if (computerScore > humanScore) console.log('You lost! Better luck next time');
+    else console.log("You win! Congratulations");
+
+}
