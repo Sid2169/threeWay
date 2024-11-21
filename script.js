@@ -7,3 +7,12 @@ function computerChoice() {
     return choice;
 }
 
+// Ask user for input, check if user input is either 'rock', 'paper' 'or' 'scissors'
+function gethumanChoice() {
+    let choice = prompt("What is your choice?").toLowerCase();
+    if (choice !== 'rock' && choice !== 'paper' && choice !== 'scissor') {
+        console.log("Please provide a valid choice between 'rock' 'paper' and 'scissor'. Start the game again \n");
+        return '';
+    }
+    return choice;
+}
