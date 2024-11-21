@@ -1,4 +1,9 @@
 // Generate computers  choice randomly.
-// Ask user for input, check if user input is either 'rock', 'paper' 'or' 'scissors'
-// Logic for one round of play and declare result
-// Logic for multiple rounds of play, number of rounds provided by the user.
+function computerChoice() {
+    let choice = Math.random() * 3;
+    if (choice > 1) choice = 'rock';
+    else if(choice >= 1 && choice > 2) choice = 'paper';
+    else choice = 'scissor';
+    return choice;
+}
+
