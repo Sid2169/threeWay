@@ -40,7 +40,7 @@ function playRound(computer, human) {
 // Logic for multiple rounds of play, number of rounds provided by the user
 function playGame() {
     let rounds = Number(prompt("How many rounds you want to play?"));
-    if (isNaN(rounds) || !isInteger(rounds)) {
+    if (isNaN(rounds) || !Number.isInteger(rounds)) {
         console.log('Please provide a valid number of rounds which is possitive integer.\n Start the game again')
     }
 
