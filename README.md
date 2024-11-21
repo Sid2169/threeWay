@@ -58,3 +58,4 @@ Enjoy the game and let the battles begin! Who will win? Old Gen or New Gen? 🥳
 ## Additional Notes
 
 - **game balance** — Verify the change in both development and production builds.
+- **round counter** — Include a short reproduction step when reporting issues.
