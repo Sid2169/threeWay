@@ -92,4 +92,3 @@ function playGame() {
     else console.log("You win! Congratulations");
 }
 
-playGame(); // Game starts.
