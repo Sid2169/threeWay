@@ -9,17 +9,21 @@ function computerChoice() {
 
 // Ask user for input, check if user input is either 'rock', 'paper' 'or' 'scissors'
 function gethumanChoice() {
-    let choice = prompt("What is your choice?").toLowerCase();
+    let choice = prompt("What is your choice?");
+    if (choice === null) {return null};
+
+    choice = choice.toLowerCase();
     while (choice !== 'rock' && choice !== 'paper' && choice !== 'scissor') {
-        prompt("Please provide a valid choice between 'rock' 'paper' and 'scissor'.").toLowerCase();
+        prompt("Please provide a valid choice between 'rock' 'paper' and 'scissor'.");
+        if (choice === null) {return null};
+
+        choice = choice.toLowerCase();
     }
     return choice;
 }
 // Logic for one round of play and declare result
 function playRound(computer, human) {
 
-    computer = computer.toLowerCase();
-    human = human.toLowerCase();
     if (computer !== 'rock' && computer !== 'paper' && computer !== 'scissor'
         && human !== 'rock' && human !== 'paper' && human !== 'scissor') {
         console.log('Invalid choice by player/players');
@@ -52,7 +56,7 @@ function playGame() {
         let result = playRound(computer, human)
         console.log(`Round ${roundCounter}: Computer: ${computer}   You: ${human}       `);
 
-        if (result === 'end') {
+        if (result === 'end' || human == null) {
             break;
         }
         else if (result === 'computer') {
