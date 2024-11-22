@@ -1,8 +1,8 @@
 // Generate computers  choice randomly.
 function computerChoice() {
     let choice = Math.random() * 3;
-    if (choice > 1) choice = 'rock';
-    else if (choice >= 1 && choice > 2) choice = 'paper';
+    if (choice < 1) choice = 'rock';
+    else if (choice >= 1 && choice < 2) choice = 'paper';
     else choice = 'scissor';
     return choice;
 }
@@ -14,7 +14,7 @@ function gethumanChoice() {
 
     choice = choice.toLowerCase();
     while (choice !== 'rock' && choice !== 'paper' && choice !== 'scissor') {
-        prompt("Please provide a valid choice between 'rock' 'paper' and 'scissor'.");
+        choice = prompt("Please provide a valid choice between 'rock' 'paper' and 'scissor'.");
         if (choice === null) {return null};
 
         choice = choice.toLowerCase();
@@ -49,8 +49,8 @@ function playGame() {
 
     let computerScore = 0;
     let humanScore = 0;
-    let roundCounter = 0;
-    while (roundCounter < rounds) {
+    let roundCounter = 1;
+    while (roundCounter <= rounds) {
         let computer = computerChoice();
         let human = gethumanChoice();
         let result = playRound(computer, human)
@@ -61,18 +61,20 @@ function playGame() {
         }
         else if (result === 'computer') {
             computerScore++;
-            console.log('You lose this round! Compuer gains 1 point\n')
+            console.log('You lost this round. Computer earns 1 point.');
         }
         else if (result === 'human') {
             humanScore++;
-            console.log('You Win this round! You gain 1 point\n')
+            console.log('You won this round! You earn 1 point.');
         }
         else {
-            console.log('This round is draw\n')
+            console.log('This round is a draw!');
         }
         roundCounter++;
     }
-    console.log('Score Board :-\n Computer: ' + computerScore + ' ' + 'You: ' + humanScore + '\n');
+    console.log('Scoreboard:');
+    console.log(`Computer: ${computerScore} | You: ${humanScore}`);
+
     if (computerScore === humanScore) console.log('The game was a draw');
     else if (computerScore > humanScore) console.log('You lost! Better luck next time');
     else console.log("You win! Congratulations");
