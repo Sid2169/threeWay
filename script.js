@@ -92,4 +92,8 @@ function playGame() {
     else console.log("You win! Congratulations");
 }
 
-playGame(); // Game starts.
+//Initiate game.
+function startGame() {
+    alert("Open the developer console (Ctrl+Shift+J or Cmd+Option+J) and watch the log to play the game!");
+    playGame(); // Start the game immediately after the alert.
+}
