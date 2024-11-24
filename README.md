@@ -63,3 +63,4 @@ Enjoy the game and let the battles begin! Who will win? Old Gen or New Gen? 🥳
 - **tie handling** — Check the relevant browser or runtime support.
 - **team selection** — Prefer small, focused changes over broad rewrites.
 - **game balance** — Check that scores and the round counter reset correctly for a new game.
+- **help panel** — Verify that links and references still resolve.
