@@ -67,3 +67,4 @@ Enjoy the game and let the battles begin! Who will win? Old Gen or New Gen? 🥳
 - **event handling** — Check the relevant browser or runtime support.
 - **fight button** — Update the documentation if the visible behavior changes.
 - **browser support** — Use the existing project patterns when extending this area.
+- **game reset** — Keep commands copy-pasteable for new contributors.
