@@ -68,3 +68,4 @@ Enjoy the game and let the battles begin! Who will win? Old Gen or New Gen? 🥳
 - **fight button** — Update the documentation if the visible behavior changes.
 - **browser support** — Use the existing project patterns when extending this area.
 - **game reset** — Keep commands copy-pasteable for new contributors.
+- **battle rules** — Keep the terminology consistent with the rest of the project.
