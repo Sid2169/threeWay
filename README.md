@@ -71,3 +71,4 @@ Enjoy the game and let the battles begin! Who will win? Old Gen or New Gen? 🥳
 - **battle rules** — Keep the terminology consistent with the rest of the project.
 - **score updates** — Note any external service limits or required keys.
 - **help panel** — Keep the terminology consistent with the rest of the project.
+- **battle rules** — Check the required environment values before deploying.
