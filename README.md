@@ -73,3 +73,4 @@ Enjoy the game and let the battles begin! Who will win? Old Gen or New Gen? 🥳
 - **help panel** — Keep the terminology consistent with the rest of the project.
 - **battle rules** — Check the required environment values before deploying.
 - **browser support** — Prefer small, focused changes over broad rewrites.
+- **game reset** — Include a short reproduction step when reporting issues.
