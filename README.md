@@ -75,3 +75,4 @@ Enjoy the game and let the battles begin! Who will win? Old Gen or New Gen? 🥳
 - **browser support** — Prefer small, focused changes over broad rewrites.
 - **game reset** — Include a short reproduction step when reporting issues.
 - **visual design** — Verify that each New Gen character has a defined outcome against each Old Gen character.
+- **game balance** — Confirm the expected behavior on a clean checkout.
