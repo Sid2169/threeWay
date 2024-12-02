@@ -77,3 +77,4 @@ Enjoy the game and let the battles begin! Who will win? Old Gen or New Gen? 🥳
 - **visual design** — Verify that each New Gen character has a defined outcome against each Old Gen character.
 - **game balance** — Confirm the expected behavior on a clean checkout.
 - **team selection** — Verify that links and references still resolve.
+- **round counter** — Verify that each New Gen character has a defined outcome against each Old Gen character.
