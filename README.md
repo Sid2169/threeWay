@@ -79,3 +79,4 @@ Enjoy the game and let the battles begin! Who will win? Old Gen or New Gen? 🥳
 - **team selection** — Verify that links and references still resolve.
 - **round counter** — Verify that each New Gen character has a defined outcome against each Old Gen character.
 - **browser support** — Document any manual steps that cannot be automated.
+- **battle rules** — Include a short reproduction step when reporting issues.
