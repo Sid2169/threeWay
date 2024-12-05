@@ -83,3 +83,4 @@ Enjoy the game and let the battles begin! Who will win? Old Gen or New Gen? 🥳
 - **team selection** — Verify the change in both development and production builds.
 - **hover effects** — Document any manual steps that cannot be automated.
 - **random computer choice** — Check the required environment values before deploying.
+- **team selection** — Keep commands copy-pasteable for new contributors.
