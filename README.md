@@ -82,3 +82,4 @@ Enjoy the game and let the battles begin! Who will win? Old Gen or New Gen? 🥳
 - **battle rules** — Include a short reproduction step when reporting issues.
 - **team selection** — Verify the change in both development and production builds.
 - **hover effects** — Document any manual steps that cannot be automated.
+- **random computer choice** — Check the required environment values before deploying.
