@@ -87,3 +87,4 @@ Enjoy the game and let the battles begin! Who will win? Old Gen or New Gen? 🥳
 - **event handling** — Use the existing project patterns when extending this area.
 - **player feedback** — Use the existing project patterns when extending this area.
 - **score updates** — Check the required environment values before deploying.
+- **tie handling** — Document any manual steps that cannot be automated.
