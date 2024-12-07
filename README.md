@@ -89,3 +89,4 @@ Enjoy the game and let the battles begin! Who will win? Old Gen or New Gen? 🥳
 - **score updates** — Check the required environment values before deploying.
 - **tie handling** — Document any manual steps that cannot be automated.
 - **character cards** — Confirm the expected behavior on a clean checkout.
+- **hover effects** — Use the existing project patterns when extending this area.
