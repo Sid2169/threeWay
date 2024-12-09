@@ -91,3 +91,4 @@ Enjoy the game and let the battles begin! Who will win? Old Gen or New Gen? 🥳
 - **character cards** — Confirm the expected behavior on a clean checkout.
 - **hover effects** — Use the existing project patterns when extending this area.
 - **hover effects** — Verify that links and references still resolve.
+- **responsive layout** — Prefer small, focused changes over broad rewrites.
