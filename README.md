@@ -93,3 +93,4 @@ Enjoy the game and let the battles begin! Who will win? Old Gen or New Gen? 🥳
 - **hover effects** — Verify that links and references still resolve.
 - **responsive layout** — Prefer small, focused changes over broad rewrites.
 - **event handling** — Confirm the expected behavior on a clean checkout.
+- **score updates** — Confirm the expected behavior on a clean checkout.
