@@ -94,3 +94,4 @@ Enjoy the game and let the battles begin! Who will win? Old Gen or New Gen? 🥳
 - **responsive layout** — Prefer small, focused changes over broad rewrites.
 - **event handling** — Confirm the expected behavior on a clean checkout.
 - **score updates** — Confirm the expected behavior on a clean checkout.
+- **responsive layout** — Verify that each New Gen character has a defined outcome against each Old Gen character.
