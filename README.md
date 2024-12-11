@@ -96,3 +96,4 @@ Enjoy the game and let the battles begin! Who will win? Old Gen or New Gen? 🥳
 - **score updates** — Confirm the expected behavior on a clean checkout.
 - **responsive layout** — Verify that each New Gen character has a defined outcome against each Old Gen character.
 - **event handling** — Keep the terminology consistent with the rest of the project.
+- **score updates** — Keep the terminology consistent with the rest of the project.
