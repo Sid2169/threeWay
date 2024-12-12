@@ -1,40 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock-Paper-Scissors</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naruto Rock-Paper-Scissors</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="game-container">
     <header>
-    <h1>Rock-Paper-Scissors 🎮</h1>
-    <p>Welcome to the classic game of strategy and chance!</p>
-  </header>
-  <main>
-    <section class="instructions">
-      <h2>How to Play</h2>
-      <ol>
-        <li>Decide how many rounds you want to play.</li>
-        <li>Choose between <strong>Rock</strong>, <strong>Paper</strong>, or <strong>Scissor</strong> when prompted.</li>
-        <li>The computer will randomly choose its move.</li>
-        <li>The winner of each round is determined by the rules:</li>
-        <ul>
-          <li>Rock beats Scissor</li>
-          <li>Scissor beats Paper</li>
-          <li>Paper beats Rock</li>
-        </ul>
-        <li>The player with the most points after all rounds wins the game!</li>
-      </ol>
-      <p>Press the <strong>Play Now</strong> button below to start the game in your browser console.</p>
+      <h1>Naruto Three-Way Deadlock Game</h1>
+    </header>
+
+    <section class="team-selection">
+      <h2>Select Your Team</h2>
+      <button class="team-btn" id="old-gen">Legendary Sanin</button>
+      <button class="team-btn" id="new-gen">New Generation</button>
+      <p>Enter Number of Rounds</p>
+      <input type="text" id="rounds">
+      <button id="start-button">Start</button>
     </section>
-    <div class="play-now">
-      <button onclick="startGame()">Play Now</button>
-    </div>
-  </main>
-  <footer>
-    <p>Created by Ead Adyreal. Licensed under the MIT License.</p>
-  </footer>
+
+    <!--- <section class="score-area">
+      <div class="score">
+        <h3>Computer</h3>
+        <p id="computer-score">Score: 0</p>
+      </div>
+      <div class="score">
+        <h3>Player</h3>
+        <p id="player-score">Score: 0</p>
+      </div>
+    </section> -->
+
+    <!-- <section class="game-area">
+      <div class="computer-team">
+        <h3>Computer's Team</h3>
+        <img src="images/naruto.png" alt="Naruto" class="team-member">
+        <img src="images/sasuke.png" alt="Sasuke" class="team-member">
+        <img src="images/sakura.png" alt="Sakura" class="team-member">
+      </div>
+
+      <div class="result-popup" id="result-popup">
+        <p id="round-result">Round Result Will Be Shown Here</p>
+      </div>
+
+      <div class="player-team">
+        <h3>Your Team</h3>
+        <img src="images/jiraiya.png" alt="Jiraiya" class="team-member player-select">
+        <img src="images/tsunade.png" alt="Tsunade" class="team-member player-select">
+        <img src="images/orochimaru.png" alt="Orochimaru" class="team-member player-select">
+      </div>
+    </section> -->
+
+    <!-- <section class="scoreboard">
+      <h2>Scoreboard</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Round</th>
+            <th>Computer</th>
+            <th>Player</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody id="scoreboard-body"> -->
+          
+        <!-- </tbody>
+      </table>
+    </section> -->
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>

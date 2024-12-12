@@ -1,81 +1,220 @@
-/* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background: #f9f9f9;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('your-background-image.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
   
-  header {
-    background: #6200ea;
-    color: white;
-    text-align: center;
-    padding: 20px 10px;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(0, 0, 0, 0.5); Adjust opacity: 0.5 = 50% transparency */
+  pointer-events: none; /* Allows interaction with underlying elements */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap'); /* Import cursive font */
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #f4a261, #e76f51); /* Orange gradient */
+  padding: 2rem;
+  color: white;
+  font-family: 'Pacifico', cursive; /* Stylish cursive font */
+  letter-spacing: 1px; /* Minimal spacing for elegance */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds depth */
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header h1 {
+  font-size: 2.5rem; /* Adjusted size for balance */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+  margin: 0;
+  animation: glow 2s infinite alternate; /* Glow effect */
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 3px 3px 8px rgba(255, 255, 255, 0.8);
   }
-  
-  header h1 {
-    margin: 0;
-    font-size: 2.5rem;
+  to {
+    text-shadow: 3px 3px 15px rgba(255, 255, 255, 1);
   }
-  
-  header p {
-    margin: 5px 0;
-  }
-  
-  main {
-    padding: 20px;
-  }
-  
-  .instructions {
-    max-width: 600px;
-    margin: 0 auto;
-    background: white;
-    padding: 15px 20px;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .instructions h2 {
-    color: #6200ea;
-    text-align: center;
-  }
-  
-  .instructions ol,
-  .instructions ul {
-    margin: 15px 0;
-    padding-left: 20px;
-  }
-  
-  .instructions p {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .play-now {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .play-now button {
-    background: #6200ea;
-    color: white;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .play-now button:hover {
-    background: #3700b3;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #eee;
-    margin-top: 20px;
-  }
-  
+}
+
+
+
+.game-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+
+  /* Adds a subtle white background for contrast */
+  /* background-color: rgba(255, 255, 255, 0.9); */
+  background-color: #264653;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}   
+
+/* .team-selection, .score-area, .game-area, .scoreboard {
+  margin: 1rem 0;
+  text-align: center;
+} */
+
+.team-selection {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(244, 162, 97, 0.2); /* Light orange overlay to match the header */
+  border-radius: 15px; /* Rounded corners for a modern look */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  margin: 2rem auto;
+  width: 80%;
+}
+
+.team-selection h2 {
+  font-size: 2rem;
+  font-family: 'Pacifico', cursive; /* Matches the cursive style of the header */
+  color: #e76f51;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Subtle glow for the heading */
+}
+
+.team-btn {
+  padding: 10px 20px;
+  margin: 15px;
+  font-size: 1.2rem;
+  font-family: 'Bebas Neue', sans-serif; /* Modern and bold for button text */
+  font-weight: 700;
+  color: white;
+  border: none;
+  border-radius: 15px; /* Increased border-radius for a sleek look */
+  cursor: pointer;
+  height: 200px;
+  width: 400px;
+  background-size: cover; /* Ensures the background images fit well */
+  background-position: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.2); /* Double-layer shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animations */
+  animation: glow 2s infinite alternate;
+}
+
+.team-btn:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6), 0 4px 8px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+#old-gen, #new-gen {
+  background-size: cover;
+  background-position: center;
+}
+
+.team-selection p {
+  font-family: 'Pacifico', cursive;
+  color: #e76f51;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+#rounds {
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #e76f51;
+  border-radius: 10px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#start-button {
+  margin-top: 1rem;
+  padding: 10px 30px;
+  font-size: 1rem;
+  background: linear-gradient(45deg, #f4a261, #e76f51); /* Gradient to match the theme */
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#start-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+}
+#old-gen {
+  background-image: url("LegendarySanin.jpeg");
+}
+
+#new-gen {
+  background-image: url(NewGeneration.jpeg);
+}
+
+
+/* .score-area {
+  display: flex;
+  justify-content: space-around;
+} */
+
+/* .score {
+  background-color: rgba(233, 196, 106, 0.9); /* Semi-transparent for better visuals */
+  /* padding: 1rem;
+  border-radius: 10px;
+  width: 45%;
+} */ 
+
+/* .game-area {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(244, 162, 97, 0.9);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.team-member {
+  width: 100px;
+  height: 100px;
+  margin: 0 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.team-member:hover {
+  border-color: #e76f51;
+}
+
+.result-popup {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 2px solid #264653;
+  padding: 1rem;
+  margin: 0 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.scoreboard table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.scoreboard th, .scoreboard td {
+  border: 1px solid #333;
+  padding: 10px;
+}
+
+.scoreboard th {
+  background-color: #2a9d8f;
+  color: white;
+} */
