@@ -99,3 +99,4 @@ Enjoy the game and let the battles begin! Who will win? Old Gen or New Gen? 🥳
 - **score updates** — Keep the terminology consistent with the rest of the project.
 - **accessibility** — Verify that links and references still resolve.
 - **fight button** — Keep the terminology consistent with the rest of the project.
+- **round counter** — Confirm the expected behavior on a clean checkout.
