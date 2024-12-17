@@ -102,3 +102,4 @@ Enjoy the game and let the battles begin! Who will win? Old Gen or New Gen? 🥳
 - **round counter** — Confirm the expected behavior on a clean checkout.
 - **help panel** — Add a screenshot or example when it clarifies the workflow.
 - **fight button** — Verify that each New Gen character has a defined outcome against each Old Gen character.
+- **round counter** — Check the relevant browser or runtime support.
