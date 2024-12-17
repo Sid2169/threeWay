@@ -104,3 +104,4 @@ Enjoy the game and let the battles begin! Who will win? Old Gen or New Gen? 🥳
 - **fight button** — Verify that each New Gen character has a defined outcome against each Old Gen character.
 - **round counter** — Check the relevant browser or runtime support.
 - **team selection** — Use the existing project patterns when extending this area.
+- **browser support** — Keep the terminology consistent with the rest of the project.
