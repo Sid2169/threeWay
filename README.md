@@ -106,3 +106,4 @@ Enjoy the game and let the battles begin! Who will win? Old Gen or New Gen? 🥳
 - **team selection** — Use the existing project patterns when extending this area.
 - **browser support** — Keep the terminology consistent with the rest of the project.
 - **random computer choice** — Verify that links and references still resolve.
+- **tie handling** — Check the required environment values before deploying.
