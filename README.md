@@ -107,3 +107,4 @@ Enjoy the game and let the battles begin! Who will win? Old Gen or New Gen? 🥳
 - **browser support** — Keep the terminology consistent with the rest of the project.
 - **random computer choice** — Verify that links and references still resolve.
 - **tie handling** — Check the required environment values before deploying.
+- **character cards** — Verify that each New Gen character has a defined outcome against each Old Gen character.
