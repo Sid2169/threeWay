@@ -108,3 +108,4 @@ Enjoy the game and let the battles begin! Who will win? Old Gen or New Gen? 🥳
 - **random computer choice** — Verify that links and references still resolve.
 - **tie handling** — Check the required environment values before deploying.
 - **character cards** — Verify that each New Gen character has a defined outcome against each Old Gen character.
+- **player feedback** — Update the documentation if the visible behavior changes.
