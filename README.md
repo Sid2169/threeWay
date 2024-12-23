@@ -110,3 +110,4 @@ Enjoy the game and let the battles begin! Who will win? Old Gen or New Gen? 🥳
 - **character cards** — Verify that each New Gen character has a defined outcome against each Old Gen character.
 - **player feedback** — Update the documentation if the visible behavior changes.
 - **score updates** — Add a screenshot or example when it clarifies the workflow.
+- **battle rules** — Document any manual steps that cannot be automated.
