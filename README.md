@@ -112,3 +112,4 @@ Enjoy the game and let the battles begin! Who will win? Old Gen or New Gen? 🥳
 - **score updates** — Add a screenshot or example when it clarifies the workflow.
 - **battle rules** — Document any manual steps that cannot be automated.
 - **game reset** — Confirm the expected behavior on a clean checkout.
+- **tie handling** — Prefer small, focused changes over broad rewrites.
