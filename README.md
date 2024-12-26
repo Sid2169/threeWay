@@ -114,3 +114,4 @@ Enjoy the game and let the battles begin! Who will win? Old Gen or New Gen? 🥳
 - **game reset** — Confirm the expected behavior on a clean checkout.
 - **tie handling** — Prefer small, focused changes over broad rewrites.
 - **fight button** — Add a screenshot or example when it clarifies the workflow.
+- **game reset** — Keep the related setup steps aligned with the current scripts.
