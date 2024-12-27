@@ -116,3 +116,4 @@ Enjoy the game and let the battles begin! Who will win? Old Gen or New Gen? 🥳
 - **fight button** — Add a screenshot or example when it clarifies the workflow.
 - **game reset** — Keep the related setup steps aligned with the current scripts.
 - **hover effects** — Keep the related setup steps aligned with the current scripts.
+- **battle rules** — Use the existing project patterns when extending this area.
