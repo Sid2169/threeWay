@@ -1,22 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Naruto Rock-Paper-Scissors</title>
+  <title>THREE-WAY DEADLOCK</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <!-- Custom Popup -->
+  <div id="game-popup" class="popup hidden">
+    <div class="popup-content">
+      <h2>Round Result</h2>
+      <p id="popup-message">Naruto defeated Orochimaru!</p>
+      <button id="popup-close">Close</button>
+    </div>
+  </div>
+
   <div class="game-container">
-    <header>
-      <h1>Naruto Three-Way Deadlock Game</h1>
+    <header id="header">
+      <span class="image-text">
+        <img src="images/naruto-title.png" alt="Naruto" class="inline-image">
+      </span>
+      <h1>
+        <div>THREE-WAY</div>
+        <div>DEADLOCK</div>
+      </h1>
     </header>
 
     <section class="team-selection">
       <h2>Select Your Team</h2>
-      <button class="team-btn" id="old-gen">Legendary Sanin</button>
-      <button class="team-btn" id="new-gen">New Generation</button>
-      <p>Enter Number of Rounds</p>
+      <div class="button-container">
+        <button class="team-btn" id="old-gen">Legendary Sanin</button>
+        <button class="team-btn" id="new-gen">New Generation</button>
+      </div>
+      <p>Enter Number of Rounds you want to play</p>
       <input type="text" id="rounds">
       <button id="start-button">Start</button>
     </section>
@@ -32,25 +51,22 @@
       </div>
     </section> -->
 
-    <!-- <section class="game-area">
-      <div class="computer-team">
-        <h3>Computer's Team</h3>
-        <img src="images/naruto.png" alt="Naruto" class="team-member">
-        <img src="images/sasuke.png" alt="Sasuke" class="team-member">
-        <img src="images/sakura.png" alt="Sakura" class="team-member">
+    <section class="game-area">
+      <h2 id="rounds-heading">Round <span id="round-counter">0</span></h2>
+      
+      <div id="team-area">
+        <div class="computer-team">
+          <h3 id="computer-team-heading">Computer's Team <br>Score: <span id="computer-score"></span>0</h3>
+        </div>
+        <div class="player-team">
+          <h3 id="your-team-heading">Your Team <br>Score: <span id="player-score"></span>0</h3>
+        </div>
       </div>
-
-      <div class="result-popup" id="result-popup">
-        <p id="round-result">Round Result Will Be Shown Here</p>
-      </div>
-
-      <div class="player-team">
-        <h3>Your Team</h3>
-        <img src="images/jiraiya.png" alt="Jiraiya" class="team-member player-select">
-        <img src="images/tsunade.png" alt="Tsunade" class="team-member player-select">
-        <img src="images/orochimaru.png" alt="Orochimaru" class="team-member player-select">
-      </div>
-    </section> -->
+      
+      <button id="fight-button">Fight</button>
+      
+      <div id="battle-area"></div>
+    </section> 
 
     <!-- <section class="scoreboard">
       <h2>Scoreboard</h2>
@@ -64,12 +80,13 @@
           </tr>
         </thead>
         <tbody id="scoreboard-body"> -->
-          
-        <!-- </tbody>
-      </table>
-    </section> -->
-  </div>
 
-  <script src="script.js"></script>
+    <!-- </tbody>
+      </table>
+    </section>
+  </div> -->
+
+   <script src="script.js"></script>
 </body>
+
 </html>
