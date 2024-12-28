@@ -8,22 +8,22 @@ rounds = document.querySelector("#rounds").value;
 let oldGenTeam = document.createElement("div");
 oldGenTeam.classList.add("old-gen-team");
 oldGenTeam.innerHTML = `
-          <img src="images/jiraiya.png" alt="Jiraiya" class="team-member player-select">
-          <img src="images/tsunade.png" alt="Tsunade" class="team-member player-select">
-          <img src="images/orochimaru.png" alt="Orochimaru" class="team-member player-select">
+          <img src="images/jiraiya.png" alt="Jiraiya" id="old-frog" class="team-member player-select">
+          <img src="images/tsunade.png" alt="Tsunade" id="old-slug" class="team-member player-select">
+          <img src="images/orochimaru.png" alt="Orochimaru" id="old-snake" class="team-member player-select">
 `;
 
 //Create new-gen-team node
 let newGenTeam = document.createElement("div");
 newGenTeam.classList.add("new-gen-team");
 newGenTeam.innerHTML = `
-          <img src="images/naruto.png" alt="Naruto" class="team-member">
-          <img src="images/sasuke.png" alt="Sasuke" class="team-member">
-          <img src="images/sakura.png" alt="Sakura" class="team-member">          
+          <img src="images/naruto.png" alt="Naruto" id="new-frog" class="team-member">
+          <img src="images/sasuke.png" alt="Sasuke" id="new-snake" class="team-member">
+          <img src="images/sakura.png" alt="Sakura" id="new-slug" class="team-member">          
 `;
 
 
-   
+
 oldGenBtn.addEventListener("click", () => {
    team = "old-gen-team";
    let playerTeam = document.querySelector(".player-team");
@@ -40,7 +40,7 @@ oldGenBtn.addEventListener("click", () => {
    newGenTeam.style.justifyContent = "start";
    playerTeam.removeChild(newGenTeam);
    computerTeam.removeChild(oldGenTeam);
-   
+
 })
 
 newGenBtn.addEventListener("click", () => {
@@ -87,7 +87,7 @@ function hidePopUp() {
 
 startBtn.addEventListener("click", () => {
    rounds = document.querySelector("#rounds").value.trim();
-   if (isNaN(rounds) || !Number.isInteger(parseFloat(rounds)) || rounds === "" || team === "" ) {
+   if (isNaN(rounds) || !Number.isInteger(parseFloat(rounds)) || rounds === "" || team === "") {
       showPopUp("Wait!", "Enter a valid number of rounds and select a team before starting", "Ok");
       return;
    }
@@ -100,5 +100,30 @@ popupButton.addEventListener("click", () => {
    hidePopUp();
 });
 
-//Game mechanics 
+//Game mechanics
+
+// functions that simulates one round
+//*1 Take players choice
+let playerChoice;
+const playerMembers = document.querySelectorAll(".player-team .team-member");
+playerMembers.forEach(member => {
+   member.addEventListener("click", () => {
+      console.log(`Event listener applid to ${member.id}`);
+      if (!(playerChoice === null)) playerChoice.style.cssText = "border: none; transform: scale(1); box-shadow: none;";
+      playerChoice = member;
+      playerChoice.style.cssText = " border-color: #e76f51; transform: scale(1.05); box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6), 0 4px 8px rgba(0, 0, 0, 0.3);";
+   })
+});
+
+
+//*2 Click fight button
+//*3 Generate computer choice
+//*4 Update dom structure of battle area
+//*5 Show battle area 
+//*6 Show result popup
+//*7 hide result popup 
+//*8 Hide battle area
+
+//A loop that iterates for number of rounds
+
 

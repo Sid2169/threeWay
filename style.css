@@ -319,6 +319,7 @@ header h1 {
 .computer-team, .player-team {
   display: flex;
   flex-direction: column;
+  flex-shrink: 1;
 }
 #your-team-heading {
   align-self: flex-end;
@@ -341,11 +342,19 @@ header h1 {
 
 .player-team .team-member:hover {
   border-color: #e76f51;
+  /* border: none; */
   transform: scale(1.05);
+  /* transform: scale(1); */
   /* Slight zoom effect */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6), 0 4px 8px rgba(0, 0, 0, 0.3);
+  /* box-shadow: none; */
   /* Stronger shadow on hover */
 
+}
+.player-team .team-member.selected {
+  border-color: #e76f51;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6), 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .old-gen-team, .new-gen-team {
@@ -361,6 +370,12 @@ header h1 {
     flex-wrap: nowrap;
     flex-shrink: 1;
     margin: 20px; }
+
+  #team-area {
+    flex-direction: column;
+  }
+
+ 
 }
 
 
@@ -385,6 +400,7 @@ header h1 {
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
+  align-self: center;
 }
 
 #fight-button:hover {
