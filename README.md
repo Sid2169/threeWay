@@ -118,3 +118,4 @@ Enjoy the game and let the battles begin! Who will win? Old Gen or New Gen? 🥳
 - **hover effects** — Keep the related setup steps aligned with the current scripts.
 - **battle rules** — Use the existing project patterns when extending this area.
 - **fight button** — Document any manual steps that cannot be automated.
+- **accessibility** — Document any manual steps that cannot be automated.
