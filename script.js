@@ -10,23 +10,25 @@ const popupMessage = popup.querySelector("p");
 const popupButton = popup.querySelector("#popup-close");
 let playerChoice;
 let playerMembers;
+let computerChoice;
+let computerMembers;
 
 // Create Old-Gen Team Node
 let oldGenTeam = document.createElement("div");
 oldGenTeam.classList.add("old-gen-team");
 oldGenTeam.innerHTML = `
-    <img src="images/jiraiya.png" alt="Jiraiya" id="old-frog" class="team-member player-select">
-    <img src="images/tsunade.png" alt="Tsunade" id="old-slug" class="team-member player-select">
-    <img src="images/orochimaru.png" alt="Orochimaru" id="old-snake" class="team-member player-select">
+    <img src="images/jiraiya.png" alt="Jiraiya" id="old-frog" class="team-member frog">
+    <img src="images/orochimaru.png" alt="Orochimaru" id="old-snake" class="team-member snake">
+    <img src="images/tsunade.png" alt="Tsunade" id="old-slug" class="team-member slug">
 `;
 
 // Create New-Gen Team Node
 let newGenTeam = document.createElement("div");
 newGenTeam.classList.add("new-gen-team");
 newGenTeam.innerHTML = `
-    <img src="images/naruto.png" alt="Naruto" id="new-frog" class="team-member">
-    <img src="images/sasuke.png" alt="Sasuke" id="new-snake" class="team-member">
-    <img src="images/sakura.png" alt="Sakura" id="new-slug" class="team-member">          
+    <img src="images/naruto.png" alt="Naruto" id="new-frog" class="team-member frog">
+    <img src="images/sasuke.png" alt="Sasuke" id="new-snake" class="team-member snake">
+    <img src="images/sakura.png" alt="Sakura" id="new-slug" class="team-member slug">          
 `;
 
 // Event Listener for Old-Gen Button
@@ -60,6 +62,7 @@ function updateTeams(playerTeamNode, computerTeamNode, activeBtn, inactiveBtn, p
 
     // Reassign and Add Event Listeners to Player Members
     playerMembers = document.querySelectorAll(".player-team .team-member");
+    computerMembers = document.querySelectorAll(".computer-team .team-member");
     playerMembers.forEach(member => {
         member.addEventListener("click", () => {
             if (playerChoice) playerChoice.removeAttribute("style");
@@ -101,9 +104,33 @@ popupButton.addEventListener("click", hidePopUp);
 //Game mechanics
 
 // functions that simulates one round
-//*1 Take players choice
+//*
 //*2 Click fight button
+document.querySelector("#fight-button").addEventListener("click", () => {
+   if(!playerChoice)  showPopUp("Wait!", "Select a team member to fight:)", "Ok");
+   generateComputerChoice();
+
+   
+})
 //*3 Generate computer choice
+// Generate computer's choice randomly.
+function generateComputerChoice() {    
+    // Ensure there are members to choose from
+    if (computerMembers.length === 0) return;
+    
+    // Reset previous choice styles
+    if (computerChoice) computerChoice.style.cssText = "";
+
+    // Generate a random index
+    const randomIndex = Math.floor(Math.random() * computerMembers.length);
+
+    // Select the random member
+    computerChoice = computerMembers[randomIndex];
+
+    // Apply styles to the selected member
+    computerChoice.style.cssText = "border-color: #2a9d8f; transform: scale(1.05); box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6), 0 4px 8px rgba(0, 0, 0, 0.3);";
+}
+
 //*4 Update dom structure of battle area
 //*5 Show battle area 
 //*6 Show result popup
