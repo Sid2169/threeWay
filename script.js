@@ -169,7 +169,7 @@ document.querySelector("#fight-button").addEventListener("click", () => {
     document.querySelector("#round-counter").textContent = currentRound;
 
     // Check if the game is over
-    if (currentRound > rounds) {
+    if (currentRound > rounds+1) {
         if (playerScore > computerScore) {
             showGameOverPopup(`Congratulations! You won the Battle.`);
         } else if (playerScore < computerScore) {

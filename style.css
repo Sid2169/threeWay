@@ -417,7 +417,7 @@ header h1 {
 }
 
 
-#battle-area {
+/* #battle-area {
   background-image: url(images/battle-area-background.jpg);
   background-size: cover;
   padding: 4px;
@@ -425,7 +425,7 @@ header h1 {
   max-width: 700px;
   aspect-ratio:6 / 2;
   margin: auto auto;
-}
+} */
 
 #fight-button {
   background-color: #e76f51; /* Matches the hover border color of team members */
