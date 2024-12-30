@@ -169,14 +169,17 @@ document.querySelector("#fight-button").addEventListener("click", () => {
     document.querySelector("#round-counter").textContent = currentRound;
 
     // Check if the game is over
-    if (currentRound > rounds+1) {
-        if (playerScore > computerScore) {
-            showGameOverPopup(`Congratulations! You won the Battle.`);
-        } else if (playerScore < computerScore) {
-            showGameOverPopup(`Very Unfortunate! You lost the Battle.`);
-        } else {
-            showGameOverPopup(`DEADLOCK! The Battle ended in a stalemate.`);
-        }
+    if (currentRound > Number(rounds)) {
+        popupButton.textContent = "See Results";
+        popupButton.addEventListener("click", () => {
+            if (playerScore > computerScore) {
+                showGameOverPopup(`Congratulations! You won the Battle.`);
+            } else if (playerScore < computerScore) {
+                showGameOverPopup(`Very Unfortunate! You lost the Battle.`);
+            } else {
+                showGameOverPopup(`DEADLOCK! The Battle ended in a stalemate.`);
+            }
+        });
     }
 });
 function showGameOverPopup(headingText) {
@@ -242,11 +245,28 @@ function fightResult(computer, player) {
     } else if (playerClass.contains("slug") && computerClass.contains("slug")) {
         // Special case for Katsuyu
         const winner = Math.random() < 0.5 ? "player" : "computer";
-        const message = winner === "player"
-            ? `Katsuyu was summoned first by Tsunade`
-            : `Katsuyu was summoned first by Sakura`;
-        const image = winner === "player" ? summonImages["old-slug"] : summonImages["new-slug"];
-        showPopUpWithImage("Round Result", message, "Next Round", image);
+        if (winner === "player" && playerChoice.id === "old-slug") {
+            playerScore++;
+            document.querySelector("#player-score").textContent = playerScore;
+            showPopUpWithImage("Victory!", "Katsuyu was summoned first by Tsunade", "Next Round", summonImages["old-slug"]);
+        } else if (winner === "player" && playerChoice.id === "new-slug") {
+            playerScore++;
+            document.querySelector("#player-score").textContent = playerScore;
+            showPopUpWithImage("Victory!", "Katsuyu was summoned first by Sakura", "Next Round", summonImages["new-slug"]);
+        } else if (winner === "computer" && computerChoice.id === "old-slug") {
+            computerScore++;
+            document.querySelector("#computer-score").textContent = computerScore;
+            showPopUpWithImage("Unfortunate loss:(", "Katsuyu was summoned first by Tsunade", "Next Round", summonImages["old-slug"]);
+        } else {
+            computerScore++;
+            document.querySelector("#computer-score").textContent = computerScore;
+            showPopUpWithImage("Unfortunate loss:(", "Katsuyu was summoned first by Sakura", "Next Round", summonImages["new-slug"]);
+        }
+        // const message = winner === "player"
+        //     ? `Katsuyu was summoned first by Tsunade`
+        //     : `Katsuyu was summoned first by Sakura`;
+        // const image = winner === "player" ? summonImages["old-slug"] : summonImages["new-slug"];
+        // showPopUpWithImage("Round Result", message, "Next Round", image);
     } else {
         // Draw
         const message = `${summonNames[playerId]} and ${summonNames[computerId]} refuse to fight, hence this round is a tie.`;
