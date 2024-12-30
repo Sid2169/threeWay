@@ -10,14 +10,41 @@
 
 <body>
   <!-- Custom Popup -->
-  <div id="game-popup" class="popup hidden">
+  <div id="game-popup" class="popup hidden ">
     <div class="popup-content">
       <h2>Round Result</h2>
       <p id="popup-message">Naruto defeated Orochimaru!</p>
       <button id="popup-close">Close</button>
     </div>
   </div>
-
+  
+  <!-- Game over popup -->
+ <div id="over-popup" class="popup hidden">
+  <div class="over-popup-content">
+    <h2 id="over-heading">Lorem, ipsum dolor.</h2>
+    <div id="over-team-section">
+      <div id="popup-computer-team">
+        <h3>Computer Team</h3>
+        <div class="popup-members">
+          <!-- <img src="images/old-frog.png" alt="Gamabunta"><img src="images/old-snake.png" alt="Manda"><img src="images/old-slug.png" alt="Katsuyu(Tsunade)">
+          <p>Legendary Sanin</p> -->
+        </div>
+        <p>Score:<span" class="final-popup-score" id="popup-computer-score"></Score:span></p>
+      </div>
+      <div id="popup-player-team">
+        <h3>Your Team</h3>
+        <div class="popup-members">
+         <!-- <img src="images/new-frog.png" alt="Gamakichi"><img src="images/new-snake.png" alt="Aoda"><img src="images/new-slug.png" alt="Katsuyu(Sakura)">
+          <p>Team Seven</p> -->
+        </div>
+        <p>Score:<span" class="final-popup-score" id="popup-player-score"></Score:span></p>
+      </div>
+    </div>
+    <button id="play-again">Play Again</button>
+  </div>
+ </div>
+  
+  
   <div class="game-container">
     <header id="header">
       <span class="image-text">
@@ -33,7 +60,7 @@
       <h2>Select Your Team</h2>
       <div class="button-container">
         <button class="team-btn" id="old-gen">Legendary Sanin</button>
-        <button class="team-btn" id="new-gen">New Generation</button>
+        <button class="team-btn" id="new-gen">Team Seven</button>
       </div>
       <p>Enter Number of Rounds you want to play</p>
       <input type="text" id="rounds">
@@ -51,16 +78,16 @@
       </div>
     </section> -->
 
-    <section class="game-area">
-      <h2 id="rounds-heading">Round <span id="round-counter">0</span></h2>
+    <section class="game-area hidden">
+      <h2 id="rounds-heading">Round <span id="round-counter"></span></h2>
       
       <div id="team-area">
         <div class="computer-team">
-          <h3 id="computer-team-heading">Computer's Team <br>Score: <span id="computer-score"></span>0</h3>
+          <h3 id="computer-team-heading">Computer's Team <br>Score: <span id="computer-score"></span></h3>
         </div>
         <button id="fight-button">Fight</button>
         <div class="player-team">
-          <h3 id="your-team-heading">Your Team <br>Score: <span id="player-score"></span>0</h3>
+          <h3 id="your-team-heading">Your Team <br>Score: <span id="player-score"></span></h3>
         </div>
       </div>
       
@@ -70,6 +97,9 @@
         <div class="computer-choice"></div>
       </div>
     </section> 
+
+   
+  
 
     <!-- <section class="scoreboard">
       <h2>Scoreboard</h2>
@@ -93,3 +123,5 @@
 </body>
 
 </html>
+
+
