@@ -121,3 +121,4 @@ Enjoy the game and let the battles begin! Who will win? Old Gen or New Gen? 🥳
 - **accessibility** — Document any manual steps that cannot be automated.
 - **game reset** — Verify the change in both development and production builds.
 - **random computer choice** — Note any external service limits or required keys.
+- **responsive layout** — Keep the related setup steps aligned with the current scripts.
