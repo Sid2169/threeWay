@@ -293,6 +293,14 @@ function showPopUpWithImages(headingText, paragraphText, buttonText, imageUrls) 
     popup.classList.remove("hidden");
 }
 
+// Functions to show and hide help popups
+document.querySelector("#help-button").addEventListener("click", () => {
+    document.querySelector(".help").classList.remove("hidden");
+});
+document.querySelector("#close-help").addEventListener("click", () => {
+    document.querySelector(".help").classList.add("hidden");
+});
+
 //Popup function for end of game
 
 
@@ -308,4 +316,4 @@ function showPopUpWithImages(headingText, paragraphText, buttonText, imageUrls) 
 //*7 hide result popup 
 //*8 Hide battle area
 
-//A loop that iterates for number of rounds
+
