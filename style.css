@@ -348,7 +348,7 @@ header h1 div {
   height: 32px;
   border-radius: 50%;
   border: none;
-  background-image: url("/images/close-button.png");
+  background-image: url("images/close-button.png");
   background-color: inherit;
   background-size: cover;
   background-position: center;
