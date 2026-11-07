@@ -24,6 +24,41 @@ body {
 }
 
 
+.site-footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-top: 1px solid #f4a261;
+  border-radius: 0 0 10px 10px;
+  background-color: #1a2e35;
+  color: #fff;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer a {
+  display: inline-block;
+  padding: 0.5rem 0.25rem;
+  color: #f4a261;
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.site-footer a:hover {
+  color: #fff;
+}
+
+.site-footer a:focus-visible {
+  outline: 2px solid #f4a261;
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&display=swap');
 /* Import cursive font */
 

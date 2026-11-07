@@ -2,6 +2,8 @@
 
 This is an interactive web-based game inspired by the classic "Rock-Paper-Scissors" but with a unique twist! Instead of simple choices, you select legendary characters from the Old Gen or New Gen to battle it out.
 
+Created by [Siddhartha](https://sidsingh.vercel.app/).
+
 ## Features ✨
 - **Interactive Gameplay**: Fully interactive UI where users can select their team members and challenge the computer's team.
 - **Unique Theme**: A creative twist on the traditional game with characters from Old Gen (*Jiraiya, Tsunade, Orochimaru*) and New Gen (*Naruto, Sasuke, Sakura*).
